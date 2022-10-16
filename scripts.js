@@ -99,19 +99,15 @@ console.log("6. Write a loop to iterate over the nameLengths array and calculate
 
 //* 7. Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times.
 
-let multipleConcat = [];
-
-
-let word = 'Hey';
-let n = 4;
-
-for (let i = 0; i < (n / 2); i++) {
-   word += word;
+function concatWord(word, n) {
+    let result = '';
+    for (let i = 0; i < n; i++) {
+        result += word;
+    }
+    return result;
 }
 
-multipleConcat.push(word); 
-
-console.log("7. function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times. HG: NOT DYNAMIC", multipleConcat)
+console.log("7. function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times." , concatWord('Hey', 4))
 
 //* 8. Write a function that takes two parameters, firstName and lastName, and returns a full name.
 
