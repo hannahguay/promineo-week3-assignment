@@ -41,7 +41,7 @@ let averageAges = sum(ages) / ages.length;
 console.log("1c. Use a loop to iterate through the ages array and calculate the average age.", averageAges);
 
 // 2a. Use a loop to iterate through the names array and calculate the average number of letters per name. 
-//Unsure if reduce technically counts as a loop
+
 
 let names = ["Sam", "Tommy", "Tim", "Sally", "Buck", "Bob"]; 
 
@@ -189,16 +189,18 @@ function willBuyDrink() {
 console.log("12. Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.", willBuyDrink())
 
 //* 13. Create a function of your own that solves a problem. 
-//Here is a cat counter. In Expression 1, we set the value of the variable numberOfCats to 0. Expression 2 will evaluate that numberOfCats is <10 is true, and if it is true, then it will move on to Expression 3 where the increment operator will add 1 to the value of numberOfCats, as well as print a message regarding the quanity of cats. Now the loop will continue to run until Expression 2 evaluates that numberOfCats is <10 is false, at which point it will print a message that we have enough cats. 
+//Here is a cat counter that takes a value which sets the max amount of cats you could house in your home. In Expression 1, we set the value of the variable numberOfCats to 1. Expression 2 will evaluate that numberOfCats is < n is true, and if it is true, then it will move on to Expression 3 where the increment operator will add 1 to the value of numberOfCats, as well as print a message regarding the quanity of cats. Now the loop will continue to run until Expression 2 evaluates that numberOfCats is <10 is false, at which point it will print a message that we have enough cats. 
 console.log("13. Create a function of your own that solves a problem.")
 
-function catCounter() {
-    for (let numberOfCats = 0; numberOfCats <10; numberOfCats++) {
-    console.log('We only have ' + numberOfCats + ', we need more!');
+function catCounter(n) {
+    let maxNumberOfCats = n;
+
+    for (let numberOfCats = 1; numberOfCats < maxNumberOfCats; numberOfCats++) {
+    console.log('We only have ' + numberOfCats + ', we need more cats!');
     } 
-    return '** We have enough cats! **';
+    return 'We have ' + maxNumberOfCats + ' cats, that is enough cats!';
 }
 
-console.log(catCounter())
+console.log(catCounter(4))
 
 
